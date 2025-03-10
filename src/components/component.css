@@ -1,0 +1,218 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.logo{
+    margin: 10px;
+}
+.menu-bar{
+    margin: 10px;
+}
+.bar{
+    background-color: black;
+    border: none;
+    padding: 10px;
+    color: white;
+}
+.bar:hover{
+    background-color: lightgrey;
+    color: black;
+}
+.home{
+    display: grid;
+    grid-template-areas: "home-header home-header"
+    "home-introduction home-introduction"
+    "home-card home-card "
+    "home-footer home-footer";
+}
+.sidebar{
+    text-align: center;
+    margin-top: 10px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.home-header{
+    grid-area: home-header;
+}
+.home-sidebar{
+    margin-right: 10px;
+    grid-area: home-sidebar;
+    display: none;
+    /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
+}
+.home-introduction{
+    grid-area: home-introduction;
+}
+.home-footer{
+    grid-area: home-footer;
+}
+.footer{
+    padding: 20px;
+}
+.card{
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid lightgrey;
+   /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
+}
+.footwear-shirt-pant-card{
+    padding: 10px;
+    margin: 10px;
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.card:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    color: blue;
+}
+.home-card{
+    grid-area: home-card;
+    display: flex;
+}
+.product-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.product-image{
+    width: 100%;
+    height: auto;
+}
+.introduction{
+    background-image: url(C:\Users\PC\OneDrive\Desktop\online-store\online-store\src\assets\background.webp);
+    width: 100%;
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+    margin-top: 55px;
+}
+.icons{
+    display: flex;
+    justify-content: space-between;
+}
+.list{
+    padding: 10px;
+}
+.product-list{
+    margin-top: 100px;
+}
+.list:hover{
+    background-color: lightgrey;
+}
+.setings-list{
+    margin-top: 100px;
+}
+.setings{
+    padding: 10px;
+    font-size: large;
+}
+.setings:hover{
+    background-color: lightgrey;
+}
+.login{
+    margin-top: 100px;
+}
+.login-btn{
+    padding: 10px;
+    border: none;
+    background-color: greenyellow;
+    font-size: large;
+}
+.comment{
+    margin: 10px;
+    border: none;
+    background-color: rgb(179, 151, 151);
+    border-radius: 10px;
+}
+.user-circle{
+    margin: 10px;
+    border: none;
+    background-color: rgb(179, 151, 151);
+    border-radius: 10px;
+}
+.comment:hover{
+    background-color: lightgrey;
+}
+.user-circle:hover{
+    background-color: lightgrey;
+}
+.product-detail{
+    text-align: center;
+    margin: 20px;
+}
+.buy-now{
+    padding: 10px;
+    border: none;
+    background-color: yellow;
+}
+.product-image-detail{
+    width: 100%;
+    height: auto;
+}
+.card-3{
+    display: none;
+}
+.footwear-shirt-pant{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.footwear-image{
+    width: 100%;
+    height: auto;
+}
+@media(min-width: 680px){
+    .product-image-detail{
+        width: 50%;
+    }
+}
+@media(min-width: 1024px){
+    .footwear-image{
+        width: 50%;
+
+    }
+    .card{
+        margin: 0;
+    }
+    .home{
+        grid-template-areas: "home-sidebar home-introduction home-introduction"
+        "home-sidebar home-card home-card"
+        "home-footer home-footer home-footer";
+    }
+    .home-sidebar{
+        display: block;
+        position: sticky;
+        height: 100vh;
+        width: 10rem;
+        top: 0;
+        margin-left: 50px;
+    }
+    .home-header{
+        display: none;
+    }
+    .header{
+        background-color: white;
+        color: black;
+    }
+    .product-image{
+        width: 100%;
+    }
+    .product-image-detail{
+        width: 30%;
+    }
+    .card-3{
+        display: block;
+    }
+    .introduction{
+        margin-top: 0;
+    }
+    .footwear-shirt-pant-card{
+        display: flex;
+        justify-content: space-evenly;
+    }
+}
