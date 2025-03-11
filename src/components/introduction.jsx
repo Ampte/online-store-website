@@ -1,10 +1,12 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 
-const Introduction = () => {
+const Introduction = ({userName}) => {
 
     return(
         <>
+        <div className='introduction'>
+        </div>
         </>
     );
 };
