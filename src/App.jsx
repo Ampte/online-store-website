@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import {BrowserRouter as Router, Route, Routes, BrowserRouter} from 'react-router-dom'
+import {BrowserRouter as Router, Route, Routes, BrowserRouter, HashRouter} from 'react-router-dom'
 import './App.css'
 import Home from './components/home'
 import ProductDetail from './components/productDetail'
@@ -19,7 +19,7 @@ function App() {
 
   return (
     <>
-    <BrowserRouter>
+    <HashRouter>
     <Routes>
       <Route path='/' element={<Home />}/>
       <Route path='/productDetail/:id' element={<ProductDetail/>}/>
@@ -34,7 +34,7 @@ function App() {
       <Route path='/about' element={<About/>}/>
       <Route path='/contact' element={<Contact/>}/>
     </Routes>
-    </BrowserRouter>
+    </HashRouter>
     </>
   );
 };
